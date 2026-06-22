@@ -1,0 +1,147 @@
+.container2{
+    border-radius: 6px;
+    width: 100%;
+    max-width: 1000px;
+    margin: 1rem 0;
+    min-height: 100vh;
+    background-color: #BBE0EF;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 2rem 8rem;
+}
+.container2 header{
+    display: flex;
+    justify-content: space-between;
+    position: relative;
+    text-align: center;
+    font-family: 'Basteleur', cursive;
+    max-width: 900px;
+    padding: 1.5rem 0;
+    margin-bottom: 0.5rem;
+}
+.header2 h1{
+
+    font-size: 1.8rem;
+
+    color: #111844;
+
+}
+.container2 header img{
+    position: absolute;
+    top: -12rem;
+    right: 14rem;
+    transform: scale(0.1);
+}
+#logout-button2 {
+    position: absolute;
+    right: -17rem;
+    margin-left: auto;
+    background: linear-gradient(
+            135deg,
+            #c0c0c0 0%,
+            #e8e8e8 25%,
+            #a0a0a0 50%,
+            #e0e0e0 75%,
+            #b0b0b0 100%
+    );
+    color: #111844;
+    border: 1px solid rgba(0, 0, 0, 0.25);;
+    padding: 0.4rem 1.2rem;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 1.2rem;
+    transition: all 0.2s;
+
+}
+#logout-button2:hover {
+    background:linear-gradient(
+            135deg,
+            #1a1a2e 0%,
+            #4a4a6a 25%,
+            #1a1a2e 50%,
+            #3a3a5a 75%,
+            #1a1a2e 100%
+    );
+    color: lightgray;
+    transform: scale(1.05);
+
+}
+.records-top2 {
+
+    font-family: 'Basteleur', serif;
+    color: #2C5EAD;
+    font-size: 1rem;
+    width: 115%;
+    max-width: 900px;
+    margin-bottom: 1rem;
+}
+.table2{
+    padding: 3rem 5rem;
+    width: 115%;
+    max-width: 1200px;
+    border-collapse: collapse;
+    font-size: 0.8rem;
+    font-family: "Basteleur", serif;
+    background:  #81A6C6;
+    border-radius: 8px;
+    overflow: hidden;
+}
+.table-heading2{
+    background: #8CC0EB;
+    color: #111844;
+    padding: 0.8rem 1rem;
+    text-align: left;
+    font-size: 0.9rem;
+    letter-spacing: 0.07em;
+}
+.table-heading2 td{
+    animation: fadeIn 1s ease-in;
+    padding: 0.75rem 1rem;
+    color: #111844;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+    text-align: left;
+}
+.table-row2:last-child td {
+    border-bottom: none;
+}
+.table-row2:hover {
+    background: rgba(77, 166, 217, 0.08);
+}
+.dashboard-footer2 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1.5rem;
+    margin-top: 1.5rem;
+    padding-bottom: 2rem;
+    font-family: 'Basteleur', serif;
+}
+.page-count2 {
+    font-family: 'Basteleur', serif;
+    color: #28396C;
+    font-size: 0.9rem;
+}
+.prev-button2,
+.next-button2 {
+    font-family: 'Basteleur', serif;
+    background: #B4D3D9;
+    color: #28396C;
+    border: 1px solid #28396C;
+    padding: 0.4rem 1rem;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 0.9rem;
+    transition: all 0.2s;
+}
+.prev-button2:hover,
+.next-button2:hover {
+    background: #4da6d9;
+    color: white;
+    transform: scale(1.05);
+}
+.prev-button2:disabled,
+.next-button2:disabled {
+    opacity: 0.3;
+    cursor: not-allowed;
+}

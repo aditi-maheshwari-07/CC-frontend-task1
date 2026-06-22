@@ -1,0 +1,234 @@
+@font-face {
+    font-family: 'Myfont';
+    src: url('../components/CsSewardDiscoRegularDemo-vn8zM.otf') format('OpenType');
+}
+@font-face {
+    font-family: 'Basteleur';
+    src: url('../components/Basteleur-Bold.woff2') format('woff2'),
+    url('../components/Basteleur-Bold.woff') format('woff');
+
+    font-style: normal;
+}
+
+.container {
+    border-radius: 6px;
+    width: 100%;
+    max-width: 1000px;
+    margin: 1rem 0;
+    min-height: 100vh;
+    background-color: #2F578A;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+   padding: 2rem 8rem;
+}
+.header {
+    display: flex;
+    justify-content: space-between;
+    position: relative;
+    text-align: center;
+    font-family: 'Basteleur', cursive;
+    max-width: 900px;
+    padding: 1.5rem 0;
+    margin-bottom: 0.5rem;
+}
+.header img{
+
+    position: absolute;
+    top: -12rem;
+    right: 14rem;
+    transform: scale(0.1);
+}
+.header h1 {
+    font-size: 1.8rem;
+
+    color: ghostwhite;
+}
+#logout-button {
+position: absolute;
+    right: -17rem;
+    margin-left: auto;
+    background:linear-gradient(
+            135deg,
+            #1a1a2e 0%,
+            #4a4a6a 25%,
+            #1a1a2e 50%,
+            #3a3a5a 75%,
+            #1a1a2e 100%
+    );
+    color: lightgray;
+    border: 1px solid rgba(0, 0, 0, 0.25);;
+    padding: 0.4rem 1.2rem;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 1.2rem;
+    transition: all 0.2s;
+}
+
+#logout-button:hover {
+    background: linear-gradient(
+            135deg,
+            #c0c0c0 0%,
+            #e8e8e8 25%,
+            #a0a0a0 50%,
+            #e0e0e0 75%,
+            #b0b0b0 100%
+    );
+    color: black;
+    transform: scale(1.05);
+}
+
+
+.records-top {
+    font-family: 'Basteleur', serif;
+    color: #a0c4e0;
+    font-size: 1rem;
+    width: 115%;
+    max-width: 900px;
+    margin-bottom: 1rem;
+}
+
+.table {
+    padding: 3rem 5rem;
+    width: 115%;
+    max-width: 1200px;
+    border-collapse: collapse;
+    font-size: 0.8rem;
+    font-family: 'Basteleur', serif;
+    background: #0A2947;
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+.table-heading {
+    background: rgba(0, 0, 0, 0.25);
+    color: #4da6d9;
+    padding: 0.8rem 1rem;
+    text-align: left;
+    font-size: 0.9rem;
+    letter-spacing: 0.07em;
+}
+
+.table-data {
+    animation: fadeIn 1s ease-in;
+    padding: 0.75rem 1rem;
+    color: #e0f0ff;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+    text-align: left;
+}
+
+.table-row:last-child td {
+    border-bottom: none;
+}
+
+.table-row:hover {
+    background: rgba(77, 166, 217, 0.08);
+}
+
+
+.dashboard-footer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1.5rem;
+    margin-top: 1.5rem;
+    padding-bottom: 2rem;
+    font-family: 'Basteleur', serif;
+}
+
+.page-count {
+    color: #a0c4e0;
+    font-size: 0.9rem;
+}
+
+.prev-button,
+.next-button {
+    font-family: 'Basteleur', serif;
+    background: #B4D3D9;
+    color: #28396C;
+    border: 1px solid #4da6d9;
+    padding: 0.4rem 1rem;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 0.9rem;
+    transition: all 0.2s;
+}
+
+.prev-button:hover,
+.next-button:hover {
+    background: #4da6d9;
+    color: white;
+    transform: scale(1.05);
+}
+
+.prev-button:disabled,
+.next-button:disabled {
+    opacity: 0.3;
+    cursor: not-allowed;
+}
+
+.loading-text {
+    animation: expand 0.8s ease-out;
+    color: ghostwhite;
+    font-family: 'Basteleur', serif;
+    font-size: 1.5rem;
+    text-align: center;
+    margin-top: 10vh;
+}
+@keyframes expand {
+    from { letter-spacing: -5px; opacity: 0; }
+    to   { letter-spacing: normal; opacity: 1; }
+}
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to   { opacity: 1; }
+}
+.switch {
+    font-family: 'Basteleur', serif;
+    font-size: 0.9rem;
+    padding: 0.5rem;
+    position: absolute;
+    top: 2rem;
+    left: -290px;
+    display: inline-block;
+    width: 48px;
+    height: 26px;
+}
+
+/* Hide default HTML checkbox */
+.switch input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+.slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #ccc;
+    transition: .4s;
+    border-radius: 26px;
+}
+.slider::before {
+    position: absolute;
+    content: "";
+    height: 20px;
+    width: 20px;
+    left: 3px;
+    bottom: 3px;
+    background-color: white;
+    transition: .4s;
+    border-radius: 50%;
+}
+input:checked + .slider {
+    background-color: black;
+}
+
+/* Knob position when checked */
+input:checked + .slider::before {
+    transform: translateX(22px);
+}
+

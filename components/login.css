@@ -1,0 +1,94 @@
+@font-face {
+    font-family: 'Myfont';
+    src: url('../components/CsSewardDiscoRegularDemo-vn8zM.otf') format('OpenType');
+}
+@font-face {
+    font-family: 'Basteleur';
+    src: url('../components/Basteleur-Bold.woff2') format('woff2'),
+    url('../components/Basteleur-Bold.woff') format('woff');
+
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Grotesque';
+    src: url('../components/terminal-grotesque-webfont.woff2') format('woff2'),
+    url('../components/terminal-grotesque-webfont.woff') format('woff');
+font-weight: bold;
+    font-style: normal;
+}
+body {
+    background-image: url('../public/bg3.png');
+    background-size: cover;     /* fills the entire element */
+    background-position: center; /* centers the image */
+    background-repeat: no-repeat;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.login-form {
+    margin: 20px auto;
+    background: #1a2f4a;
+    padding: 0 4rem;
+    border-radius: 12px;
+    width: 110%;
+    max-width: 500px;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.4);
+}
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to   { opacity: 1; }
+}
+@keyframes glow {
+    0%, 100% { text-shadow: 0 0 5px #4da6d9; }
+    50%       { text-shadow: 0 0 10px #4da6d9, 0 0 20px #4da6d9; }
+}
+.login-header {
+    animation: glow 2s ease-in-out infinite;
+    color: #e0f0ff;
+    font-family: 'Basteleur', serif;
+    font-size: 2.5rem;
+    text-align: center;
+    margin-bottom: 2rem;
+}
+.form-input{
+    font-size: 1.2rem;
+    font-family: 'Basteleur', serif;
+    width: 100%;
+    padding: 0.8rem 2rem;
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+    margin-bottom: 1.2rem;
+    background-color: #3B7597;
+    border-radius: 7px;
+}
+.form-input:focus{
+    border: 1.2px solid #000;
+}
+
+.login-button{
+    font-size: 1.2rem;
+    margin: 1rem auto;
+    font-family: 'Basteleur', serif;
+    width: 100%;
+    background-color: #6FD1D7;
+    border-radius: 10px;
+    padding: 0.5rem 1.2rem;
+    transition: transform 0.3s,
+    background-color 0.3s ease;
+}
+.login-button:hover{
+    transform: scale(1.1);
+cursor: pointer;
+    background-color: #bfeaed;
+    border: 1.2px solid #000;
+}
+img{
+
+    transform: scale(0.4);
+}
+.login-heading{
+    display: inline;
+}
