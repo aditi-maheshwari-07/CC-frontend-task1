@@ -3,7 +3,7 @@ import './dashboard.css'
 import './dashboard-lightmode.css'
 import Image from 'next/image';
 import { useState, useEffect, useRef } from "react";
-import axios from "axios"; // npm install axios
+import axios from "axios";
 import { useRouter } from "next/navigation";
 import Cookies from "js-cookie";
 
@@ -72,8 +72,9 @@ export default function TelemetryDashboard() {
     const currentRecords = history.slice(startIndex, startIndex + RECORDS_PER_PAGE);
 
     useEffect(() => {
-        const newPage = Math.ceil(history.length / RECORDS_PER_PAGE);
-        setCurrentPage(newPage);
+        if (history.length <= RECORDS_PER_PAGE) {
+            setCurrentPage(1); // only reset on first page fill
+        }
     }, [totalPages]);
 
 
